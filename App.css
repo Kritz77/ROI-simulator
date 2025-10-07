@@ -1,0 +1,214 @@
+/* ---------- GLOBAL APP LAYOUT ---------- */
+.app {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background-color: #eef1ff; /* solid lavender background everywhere */
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: #0a2a66;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  width: 100%;
+}
+
+/* ---------- MAIN CONTENT LAYOUT ---------- */
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* same height */
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+/* ---------- CARD STYLES ---------- */
+.form-section,
+.results-section {
+  flex: 1;
+  min-width: 420px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e6f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-section:hover,
+.results-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- HEADINGS ---------- */
+.form-section h2,
+.results-section h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #003366;
+  border-bottom: 2px solid #0078ff;
+  display: inline-block;
+  margin-bottom: 15px;
+  padding-bottom: 6px;
+}
+
+/* ---------- FORM GRID ---------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+  margin-bottom: 20px;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #2a2a2a;
+  font-weight: 500;
+}
+
+.form-grid input {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border: 1px solid #c8d0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9fbff;
+  transition: all 0.25s ease;
+}
+
+.form-grid input:focus {
+  border-color: #0078ff;
+  background: #ffffff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 120, 255, 0.25);
+}
+
+/* ---------- BUTTON SECTION ---------- */
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  border-top: 1px solid #e8ebf5;
+}
+
+/* Common button styles */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
+  color: white;
+  min-width: 140px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Neon Gradient Buttons */
+button:nth-child(1) {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+button:nth-child(1):hover {
+  background: linear-gradient(90deg, #009fff, #005fcb);
+}
+
+button:nth-child(2) {
+  background: linear-gradient(90deg, #00f260, #0575e6);
+}
+button:nth-child(2):hover {
+  background: linear-gradient(90deg, #00c853, #0b7dda);
+}
+
+button:nth-child(3) {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+button:nth-child(3):hover {
+  background: linear-gradient(90deg, #ff1744, #e53935);
+}
+
+/* ---------- RESULTS SECTION ---------- */
+.results-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: auto;
+}
+
+.results-section p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.result-box {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 15px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  border: 1px solid #d7ddeb;
+  max-height: 60vh;
+  color: #1c1c1c;
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+}
+
+/* ---------- SCROLLBAR STYLING ---------- */
+.result-box::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.result-box::-webkit-scrollbar-thumb {
+  background: #c0c7d1;
+  border-radius: 4px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 950px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-section,
+  .results-section {
+    min-width: 95%;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
