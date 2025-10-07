@@ -1,16 +1,30 @@
-# React + Vite
+🧾 Invoicing ROI Simulator
+A lightweight ROI calculator that helps businesses visualize cost savings and payback when switching from manual to automated invoicing.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built using React (frontend), Node.js + Express (backend), and MySQL (database) — fully deployed with Netlify + Render.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Quick Simulation
 
-## React Compiler
+Enter a few key metrics and instantly calculate monthly savings, ROI, and payback period.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Scenario Management
 
-## Expanding the ESLint configuration
+Save, load, and delete named simulation scenarios.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Report Generation (PDF)
+
+Generates downloadable PDF report (email input required before generation).
+
+✅ Positive ROI Bias
+
+Ensures automation always shows a favorable ROI using internal bias constants.
+
+✅ Fully Deployed
+
+Frontend hosted on Netlify.
+
+Backend API + Database hosted on Render and PlanetScale MySQL.
+
+🧩 Tech Stack
